@@ -1,0 +1,9 @@
+<aura:component>
+  <aura:attribute name="dashboardId" type="String"/>
+  <aura:attribute name="height" type="String"/>
+  <aura:attribute name="filter" type="String"/>
+
+  <wave:waveDashboard dashboardId = "{!v.dashboardId}" height="{!v.height}" filter="{!v.filter}"/>
+
+  
+</aura:component>	

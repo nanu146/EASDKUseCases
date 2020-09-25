@@ -1,5 +1,5 @@
 ({
-    getDashboardDetails : function(component){
+    getPersonaDashboardDetails : function(component){
         var getDashboards = component.get("c.getPersonaDashboards");
         getDashboards.setCallback(this,function(response){
             var status = response.getState();

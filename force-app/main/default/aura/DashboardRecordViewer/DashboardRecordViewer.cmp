@@ -4,7 +4,20 @@
     action="{!c.handleSelectionChanged}"
   />
   <aura:attribute name="recordId" type="String" default="" access="GLOBAL" />
+
+  <div class="demo-only" style="padding: 0.5rem; background: #16325c">
+    <div class="slds-text-heading_medium slds-text-color_inverse">
+      Dashboard Selection Update Demo:
+    </div>
+  </div>
+
   <div class="container">
-    <div class="slds-box"></div>
+    <wave:waveDashboard  dashboardId="0FK2v000000ptHmGAI" height="500"/>
+      <aura:if isTrue="{!v.recordId != ''}">
+        <div class="slds-box">
+          <h3> Record Details: </h3>
+          <force:recordView recordId="{!v.recordId}" />
+        </div>
+      </aura:if>
   </div>
 </aura:component>

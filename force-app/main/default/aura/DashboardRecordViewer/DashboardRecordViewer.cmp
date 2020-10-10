@@ -1,0 +1,10 @@
+<aura:component access="global">
+  <aura:handler
+    event="wave:selectionChanged"
+    action="{!c.handleSelectionChanged}"
+  />
+  <aura:attribute name="recordId" type="String" default="" access="GLOBAL" />
+  <div class="container">
+    <div class="slds-box"></div>
+  </div>
+</aura:component>

@@ -1,5 +1,22 @@
-<aura:component controller="PersonaDashboardClass">
+<aura:component controller="PersonaDashboardClass" >
+  <!-- Attributes -->
+  <aura:attribute name="dashboardId" default="0FK2v000000fBd1GAE" type="String"/>
+  <aura:attribute name="options" type="List" />
   <wave:sdk aura:id="sdk"/>
+
+  <!-- Handler and Event -->
   <aura:handler name="init" value="this" action="{!c.doInit}"/>
+
+  <div>
+    <div style="margin: 0px 0px 20px 0px;">
+      <lightning:combobox name="dashboards" label="Select Dashboard" value="{!v.dashboardId}" placeholder="Select Dashboard" options="{! v.options }" onchange="{! c.selectionChange }"/>
+    </div>
+    
+    <div style="height:100%;">
+      <c:DashboardViewer dashboardId="{!v.dashboardId}" height="700" /> 
+    </div>
+  </div>
+  
+  
   
 </aura:component>	
